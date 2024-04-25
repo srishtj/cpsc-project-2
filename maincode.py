@@ -1,3 +1,13 @@
+"""
+Author:         Srishti Jaiswal
+Date:           25 April
+Assignment:     Project 2
+Course:         CPSC1051
+Lab Section:    2
+
+CODE DESCRIPTION: This is an adventure text-based RPG game. It's set in ancient Persia, like Aladdin. You have to complete a quest the king gives you or you'll be killed. Have fun!
+"""
+#importing all the different classes 
 from classes import Player
 from classes import Room
 from classes import Map
@@ -5,8 +15,9 @@ from classes import Game
 import sys
 
 def main():
-    game_map = Map()
+    game_map = Map() #initialising Map class
 
+    #adding different rooms to the Map and the Room class
     serafiya = Room(
         name='Serafiya',
         description="Serafiya is a bustling city known for its exotic markets and rich culture. Adventurers often gather here to share tales and trade goods.",
@@ -66,9 +77,9 @@ def main():
     game_map.add_room(valley_of_shadows)
     game_map.add_room(ruins_of_al_qamar)
 
-    game = Game()
+    game = Game() #initialising the game class
 
-    game.display_welcome_message()
+    game.display_welcome_message() #displaying the welcome message to the game
 
     print("Press any key to continue")
     input()
@@ -82,6 +93,7 @@ def main():
     print("Suddenly, you found yourself surrounded by guards. You're being arrested! What would you like to do? Run (R) or Fight (F)")
     inp1 = input()
 
+    #using while loop to validate player input
     while inp1.lower() not in ['r', 'f']:
         print("Wrong input. Enter R or F.")
         inp1 = input()
@@ -109,7 +121,7 @@ def main():
         print("The Sultan has let you go. Good luck with your mission!")
         print("Press any key to continue")
         input()
-        game.play_game(game_map)
+        game.play_game(game_map) #starting the main game
 
     if inp2.lower() == 'n':
         print("You were killed by the Sultan's desert panther for disobedience to the crown!")
