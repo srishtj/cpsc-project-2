@@ -4,6 +4,7 @@ Date:           25 April
 Assignment:     Project 2
 Course:         CPSC1051
 Lab Section:    2
+Link: https://github.com/srishtj/cpsc-project-2.git
 
 CODE DESCRIPTION: This is an adventure text-based RPG game. It's set in ancient Persia, like Aladdin. You have to complete a quest the king gives you or you'll be killed. Have fun!
 """
